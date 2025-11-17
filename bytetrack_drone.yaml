@@ -1,0 +1,13 @@
+tracker_type: bytetrack
+fuse_score: true
+track_thresh: 0.25         # high-score threshold
+track_high_thresh: 0.5
+track_low_thresh: 0.10     # keep low-score candidates (helps recovery)
+new_track_thresh: 0.5
+match_thresh: 0.8
+track_buffer: 30           # keep tracks alive for longer
+frame_rate: 30
+
+# (optional) extra knobs some Ultralytics builds read
+# min_box_area: 10
+# mot20: false
