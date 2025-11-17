@@ -21,6 +21,8 @@ python debug.py \
 
 
 
-python guided_track_pt.py   --weights best_yolo11_960.pt   --source /home/chucky/PycharmProjects/ZALOTHIS/public_test/samples/BlackBox_0/drone_video.mp4   --object_images /home
-python guided_track_pt_true.py     --root /home/chucky/PycharmProjects/ZALOTHIS/public_test     --weights best_yolo11_960.pt     --seg_weights yolo11n-seg.pt     --context_pad 0.05     --save_video     --imgsz 640     --conf 0.2     --iou 0.45     --topk 120     --sim_thr 0.39     --seg_exemplars     --seg_mode off     --clip_batch 32     --exemplar_mode per     --infer track
+python guided_track_pt.py   --weights best_yolo11_960.pt   --source /home/chucky/PycharmProjects/ZALOTHIS/public_test/samples/BlackBox_0/drone_video.mp4   --object_images /home \
+
+python guided_track_pt_true.py     --root /home/chucky/PycharmProjects/ZALOTHIS/public_test     --weights best_yolo11_960.pt     --seg_weights yolo11n-seg.pt     --context_pad 0.05     --save_video     --imgsz 640     --conf 0.2     --iou 0.45     --topk 120     --sim_thr 0.39     --seg_exemplars     --seg_mode off     --clip_batch 32     --exemplar_mode per     --infer track \
+
 python eval_video_SM.py   --checkpoint checkpoints_SM3/siamese_mbv3_epoch26.pth   --support_dir /home/chucky/PycharmProjects/ZALOTHIS/public_test/samples/CardboardBox_1/object_images   --video_in /home/chucky/PycharmProjects/ZALOTHIS/public_test/samples/CardboardBox_0/drone_video.mp4   --video_out debug_out.mp4   --score_thresholds 0.1,0.5,0.85   --device cuda   --resize_short_side 800
